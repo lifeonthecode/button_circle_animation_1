@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Animation</title>
+    
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #171618;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .button_animation_container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            justify-content: center;
+        }
+
+        .btn_animation {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #999;
+            line-height: 2.5rem;
+            text-transform: capitalize;
+            max-width: 250px;
+            width: 100%;
+            height: 100px;
+            background-color: #171618;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 0px 30px #272424;
+        }
+
+        .btn_animation:nth-child(2) {
+            background-color: rgb(8, 6, 6);
+        }
+
+        .btn_animation span:nth-child(1) {
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: 100%;
+            height: 3px;
+            background-image: linear-gradient(to right, #171618, #3bff3b);
+            animation: animation1 2s linear infinite;
+            -webkit-animation: animation1 2s linear infinite;
+
+        }
+        
+        @keyframes animation1 {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .btn_animation span:nth-child(2) {
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            width: 3px;
+            height: 100%;
+            background-image: linear-gradient(to right, #171618, #3bff3b);
+            animation: animation2 2s linear infinite;
+            -webkit-animation: animation2 2s linear infinite;
+            animation-delay: 1s;
+            z-index: 1;
+
+        }
+
+        @keyframes animation2 {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+        .btn_animation span:nth-child(3) {
+            position: absolute;
+            bottom: 0rem;
+            right: 0rem;
+            width: 100%;
+            height: 3px;
+            background-image: linear-gradient(to right, #171618, #3bff3b);
+            animation: animation3 2s linear infinite;
+            -webkit-animation: animation3 2s linear infinite;
+            z-index: 2;
+
+        }
+
+        @keyframes animation3 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .btn_animation span:nth-child(4) {
+            position: absolute;
+            bottom: 0rem;
+            left: 0rem;
+            width: 3px;
+            height: 100%;
+            background-image: linear-gradient(to right, #171618, #3bff3b);
+            animation: animation4 2s linear infinite;
+            -webkit-animation: animation4 2s linear infinite;
+            animation-delay: 1s;
+            z-index: 3;
+
+        }
+
+        @keyframes animation4 {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- button animation  -->
+    <div class="button_animation_container">
+        <a href="#" class="btn_animation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            click me 1
+        </a>
+        <a href="#" class="btn_animation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            click me 2
+        </a>
+    </div>
+
+</body>
+
+</html>
